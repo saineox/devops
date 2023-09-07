@@ -10,5 +10,6 @@ COPY app.py .
 #install required liabraries
 RUN pip install Flask
 
+EXPOSE 5000
 #Run  Python compiled code
 CMD ["python", "app.py"]
