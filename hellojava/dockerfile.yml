@@ -1,0 +1,14 @@
+#getting base image
+FROM openjdk:11
+
+#working Directory
+WORKDIR app/
+
+# copy files -> file.java ->container locaation .
+COPY HelloWorld.java .
+
+#compile code
+RUN javac HelloWorld.java
+
+#Run  Java compiled code
+CMD ["java","HelloWorld"]
