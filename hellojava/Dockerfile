@@ -2,7 +2,7 @@
 FROM openjdk:11
 
 #working Directory
-WORKDIR app/
+WORKDIR /app
 
 # copy files -> file.java ->container locaation .
 COPY hello.java .
