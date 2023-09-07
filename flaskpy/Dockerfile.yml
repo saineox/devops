@@ -1,8 +1,8 @@
 #base image with Pythone
 From python:3.9
 
-#working Directory
-WORKDIR app/
+# Set the working directory in the container
+WORKDIR /app
 
 # copy files -> file.py->container locaation .
 COPY app.py .
@@ -11,4 +11,4 @@ COPY app.py .
 RUN pip install Flask
 
 #Run  Java compiled code
-CMD ["python","app.py"]
+CMD ["python", "app.py"]
