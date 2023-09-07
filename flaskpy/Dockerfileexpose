@@ -10,6 +10,8 @@ COPY app.py .
 #install required liabraries
 RUN pip install Flask
 
+# expose port can only access by another container 
+# not possible access by out system
 EXPOSE 5000
 #Run  Python compiled code
 CMD ["python", "app.py"]
