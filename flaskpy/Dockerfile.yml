@@ -1,0 +1,14 @@
+#base image with Pythone
+From python:3.9
+
+#working Directory
+WORKDIR app/
+
+# copy files -> file.py->container locaation .
+COPY app.py .
+
+#install required liabraries
+RUN pip install Flask
+
+#Run  Java compiled code
+CMD ["python","app.py"]
